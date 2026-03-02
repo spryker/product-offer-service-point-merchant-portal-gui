@@ -14,18 +14,8 @@ use Generated\Shared\Transfer\ServicePointCriteriaTransfer;
 
 interface ProductOfferServicePointMerchantPortalGuiToServicePointFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointCriteriaTransfer $servicePointCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServicePointCollectionTransfer
-     */
     public function getServicePointCollection(ServicePointCriteriaTransfer $servicePointCriteriaTransfer): ServicePointCollectionTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceCriteriaTransfer $serviceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceCollectionTransfer
-     */
     public function getServiceCollection(
         ServiceCriteriaTransfer $serviceCriteriaTransfer
     ): ServiceCollectionTransfer;

@@ -26,11 +26,6 @@ interface ServiceDataProviderInterface
      */
     public function getServiceSelectOptions(int $idServicePoint): array;
 
-    /**
-     * @param int $idServicePoint
-     *
-     * @return \Generated\Shared\Transfer\ServiceCollectionTransfer
-     */
     public function getServiceCollectionByIdServicePoint(int $idServicePoint): ServiceCollectionTransfer;
 
     /**

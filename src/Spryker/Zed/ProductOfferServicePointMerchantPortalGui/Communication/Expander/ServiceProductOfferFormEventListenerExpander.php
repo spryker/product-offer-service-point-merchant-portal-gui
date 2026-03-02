@@ -98,11 +98,6 @@ class ServiceProductOfferFormEventListenerExpander implements ServiceProductOffe
         return $builder;
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormEvent $formEvent
-     *
-     * @return void
-     */
     protected function addServicePointChoices(FormEvent $formEvent): void
     {
         $form = $formEvent->getForm();

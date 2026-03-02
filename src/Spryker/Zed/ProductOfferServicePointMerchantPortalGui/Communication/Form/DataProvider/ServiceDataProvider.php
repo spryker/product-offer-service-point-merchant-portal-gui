@@ -35,10 +35,6 @@ class ServiceDataProvider implements ServiceDataProviderInterface
      */
     protected ProductOfferServicePointMerchantPortalGuiConfig $productOfferServicePointMerchantPortalGuiConfig;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Dependency\Facade\ProductOfferServicePointMerchantPortalGuiToServicePointFacadeInterface $servicePointFacade
-     * @param \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\ProductOfferServicePointMerchantPortalGuiConfig $productOfferServicePointMerchantPortalGuiConfig
-     */
     public function __construct(
         ProductOfferServicePointMerchantPortalGuiToServicePointFacadeInterface $servicePointFacade,
         ProductOfferServicePointMerchantPortalGuiConfig $productOfferServicePointMerchantPortalGuiConfig
@@ -105,11 +101,6 @@ class ServiceDataProvider implements ServiceDataProviderInterface
         return $selectOptions;
     }
 
-    /**
-     * @param int $idServicePoint
-     *
-     * @return \Generated\Shared\Transfer\ServiceCollectionTransfer
-     */
     public function getServiceCollectionByIdServicePoint(int $idServicePoint): ServiceCollectionTransfer
     {
         $serviceCriteriaTransfer = (new ServiceCriteriaTransfer())->setServiceConditions(
@@ -184,12 +175,6 @@ class ServiceDataProvider implements ServiceDataProviderInterface
         return $choices;
     }
 
-    /**
-     * @param string $key
-     * @param string $name
-     *
-     * @return string
-     */
     protected function getSelectOptionTitle(string $key, string $name): string
     {
         return sprintf(

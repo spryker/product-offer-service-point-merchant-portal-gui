@@ -21,11 +21,6 @@ class ServicePointAutocompleteController extends AbstractController
      */
     protected const REQUEST_PARAM_SUGGESTION = 'term';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function indexAction(Request $request): JsonResponse
     {
         $searchTerm = (string)$request->query->get(static::REQUEST_PARAM_SUGGESTION, '');

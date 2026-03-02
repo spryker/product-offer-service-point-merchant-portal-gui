@@ -34,11 +34,6 @@ class ProductOfferServicePointMerchantPortalGuiDependencyProvider extends Abstra
      */
     public const SERVICE_UTIL_ENCODING = 'SERVICE_UTIL_ENCODING';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -49,11 +44,6 @@ class ProductOfferServicePointMerchantPortalGuiDependencyProvider extends Abstra
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addServicePointFacade(Container $container): Container
     {
         $container->set(static::FACADE_SERVICE_POINT, function (Container $container) {
@@ -65,11 +55,6 @@ class ProductOfferServicePointMerchantPortalGuiDependencyProvider extends Abstra
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addTwigEnvironment(Container $container): Container
     {
         $container->set(static::SERVICE_TWIG, function (Container $container) {
@@ -79,11 +64,6 @@ class ProductOfferServicePointMerchantPortalGuiDependencyProvider extends Abstra
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {

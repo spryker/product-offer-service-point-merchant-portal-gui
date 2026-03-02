@@ -30,9 +30,6 @@ use Twig\Environment;
  */
 class ProductOfferServicePointMerchantPortalGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Expander\ServiceProductOfferFormExpanderInterface
-     */
     public function createServiceProductOfferFormExpander(): ServiceProductOfferFormExpanderInterface
     {
         return new ServiceProductOfferFormExpander(
@@ -43,9 +40,6 @@ class ProductOfferServicePointMerchantPortalGuiCommunicationFactory extends Abst
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Expander\ServiceProductOfferFormEventListenerExpanderInterface
-     */
     public function createServiceProductOfferFormEventListenerExpander(): ServiceProductOfferFormEventListenerExpanderInterface
     {
         return new ServiceProductOfferFormEventListenerExpander(
@@ -55,17 +49,11 @@ class ProductOfferServicePointMerchantPortalGuiCommunicationFactory extends Abst
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Expander\ServiceProductOfferFormViewExpanderInterface
-     */
     public function createServiceProductOfferFormViewExpander(): ServiceProductOfferFormViewExpanderInterface
     {
         return new ServiceProductOfferFormViewExpander($this->getTwigEnvironment());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Form\DataProvider\ServiceDataProviderInterface
-     */
     public function createServiceDataProvider(): ServiceDataProviderInterface
     {
         return new ServiceDataProvider(
@@ -82,33 +70,21 @@ class ProductOfferServicePointMerchantPortalGuiCommunicationFactory extends Abst
         return new ServiceDataTransformer();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Communication\Form\Validator\ServiceValidatorInterface
-     */
     public function createServiceValidator(): ServiceValidatorInterface
     {
         return new ServiceValidator();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Dependency\Facade\ProductOfferServicePointMerchantPortalGuiToServicePointFacadeInterface
-     */
     public function getServicePointFacade(): ProductOfferServicePointMerchantPortalGuiToServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointMerchantPortalGuiDependencyProvider::FACADE_SERVICE_POINT);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointMerchantPortalGui\Dependency\Service\ProductOfferServicePointMerchantPortalGuiToUtilEncodingInterface
-     */
     public function getUtilEncodingService(): ProductOfferServicePointMerchantPortalGuiToUtilEncodingInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointMerchantPortalGuiDependencyProvider::SERVICE_UTIL_ENCODING);
     }
 
-    /**
-     * @return \Twig\Environment
-     */
     public function getTwigEnvironment(): Environment
     {
         return $this->getProvidedDependency(ProductOfferServicePointMerchantPortalGuiDependencyProvider::SERVICE_TWIG);
